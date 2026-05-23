@@ -1,0 +1,372 @@
+:root {
+
+    /* CORES DO DESIGN SYSTEM */
+
+    --rosa1: #D9ABAB;
+    --rosa2: #FFDADA;
+    --rosa3: #FFEAEA;
+
+    --azul1: #86C7E9;
+    --azul2: #92DAFF;
+    --azul3: #BBE8FF;
+
+    --verde1: #E5FF9F;
+    --verde2: #CCF267;
+    --verde3: #A5C946;
+
+    --azul-destaque: #289CCF;
+    --azul-hover: #34C1FF;
+    --azul-claro: #61CFFF;
+
+    --branco: #FFFFFF;
+    --texto: #2D2D2D;
+
+    /* SOMBRAS DO DESIGN SYSTEM */
+
+    --sombra-leve: 0px 2px 6px rgba(0, 0, 0, 0.08);
+    --sombra-media: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    --sombra-alta: 0px 8px 24px rgba(0, 0, 0, 0.16);
+
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: Helvetica, Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        var(--rosa3),
+        var(--azul3)
+    );
+
+}
+
+/* NAVBAR TOP */
+
+header {
+
+    background: var(--branco);
+
+    backdrop-filter: blur(8px);
+
+    padding: 22px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: var(--sombra-leve);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+}
+
+/* LOGO */
+
+.logo-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    text-decoration: none;
+
+}
+
+.logo-area img {
+
+    width: 100px;
+
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+/* H2 adaptado para logo */
+
+.logo-texto {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: var(--azul-destaque);
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+}
+
+.logo-area:hover .logo-texto {
+
+    color: var(--azul-hover);
+
+}
+
+/* NAV */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 45px;
+
+}
+
+.nav-link {
+
+    text-decoration: none;
+
+    color: #222;
+
+    font-weight: 600;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+    position: relative;
+
+}
+
+.nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0%;
+
+    height: 4px;
+
+    background: var(--azul-destaque);
+
+    left: 0;
+
+    bottom: -10px;
+
+    border-radius: 50px;
+
+    transition: 0.3s;
+
+}
+
+.nav-link:hover::after {
+
+    width: 100%;
+
+}
+
+/* FORMULÁRIO (Input) */
+
+.form-section {
+
+    padding: 80px 8%;
+
+}
+
+/* Card */
+
+.form-container {
+
+    background: var(--branco);
+
+    padding: 40px;
+
+    border-radius: 24px;
+
+    box-shadow: var(--sombra-leve);
+
+    border: 2px solid var(--azul2);
+
+}
+
+/* H3 Semi Bold*/
+
+.form-container h2 {
+
+    color: var(--azul-destaque);
+
+    margin-bottom: 35px;
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+}
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+}
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+/* Label — B3*/
+
+.campo label {
+
+    margin-bottom: 8px;
+
+    color: var(--azul-destaque);
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+}
+
+/* Input */
+
+.campo input,
+.campo select {
+
+    padding: 14px;
+
+    border: 1px solid #289ccf;
+
+    /* border-radius: 14px; */
+
+    outline: none;
+
+    /* background: var(--azul3); */
+
+    transition: 0.3s;
+
+    font-family: Helvetica, Arial, sans-serif;
+
+    font-size: 14px;
+
+}
+
+.campo input:focus,
+.campo select:focus {
+
+    border-color: var(--azul-destaque);
+
+    background: var(--branco);
+
+    box-shadow: 0 0 0 3px rgba(50, 130, 246, 0.3);
+
+}
+
+/* Botão primário */
+
+button {
+
+    margin-top: 30px;
+
+    background: linear-gradient(
+        135deg,
+        var(--azul-destaque),
+        var(--azul-hover)
+    );
+
+    color: var(--branco);
+
+    border: none;
+
+    padding: 16px 35px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+button:hover {
+
+    background: linear-gradient(
+        135deg,
+        var(--azul-hover),
+        var(--azul-hover)
+    );
+
+    transform: translateY(-3px);
+
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    header {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+    nav {
+
+        justify-content: center;
+
+        gap: 20px;
+
+    }
+
+    .logo-texto {
+
+        font-size: 22px;
+
+    }
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .form-container {
+
+        padding: 30px;
+
+    }
+
+    .form-container h2 {
+
+        font-size: 26px;
+
+    }
+
+}

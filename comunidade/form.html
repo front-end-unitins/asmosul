@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário</title>
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/form.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="./associar.html" aria-label="ASMOSUL">
+      <img src="img/logo.png" alt="Logo ASMOSUL" />
+      <span>ASMOSUL</span>
+    </a>
+
+    <nav class="nav" aria-label="Menu principal">
+
+
+      <a class="join-button active" href="associar.html" style="color: var(--white) !important"
+        aria-label="Seja um associado">
+        <span class="join-icon" aria-hidden="true"></span>
+        Faça parte da comunidade
+      </a>
+    </nav>
+  </header>
+  <div class="form">
+    <div class="form-hero">
+      <span class="form-badge"> Cadastro </span>
+
+      <h1>Faça parte da comunidade</h1>
+
+      <p>
+        Preencha seus dados para participar das ações e iniciativas da
+        ASMOSUL.
+      </p>
+    </div>
+
+    <form class="modern-form" method="post" target="_blank">
+      <div>
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" />
+      </div>
+
+      <div>
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" minlength="11" maxlength="14" />
+      </div>
+
+      <div>
+        <label>Sexo</label>
+        <input type="radio" name="sexo" value="masculino" />
+        Masculino
+        <input type="radio" name="sexo" value="feminino" />
+        Feminino
+      </div>
+
+      <div>
+        <label for="date">Data de nascimento</label>
+        <input type="date" name="date" />
+      </div>
+
+      <div>
+        <label for="email">E-mail *</label>
+        <input type="email" name="email" required />
+      </div>
+
+      <div>
+        <label for="telefone">Telefone *</label>
+        <input type="tel" required minlength="14" maxlength="15" />
+      </div>
+
+      <label for="escolaridade">Escolaridade:</label>
+      <select id="escolaridade" name="escolaridade" required>
+        <option value="">--Selecione--</option>
+        <option value="fundamentalI">Ensino Fundamental Incompleto</option>
+        <option value="fundamental">Ensino Fundamental</option>
+        <option value="medioI">Ensino Médio Incompleto</option>
+        <option value="medio">Ensino Médio</option>
+        <option value="superiorI">Ensino Superior Incompleto</option>
+        <option value="superior">Ensino Superior</option>
+        <option value="pos">Pós-graduação/Mestrado/Doutorado</option>
+      </select>
+      <br /><br />
+
+      <div>
+        <label for="profissao">Profissão</label>
+        <input type="text" />
+      </div>
+
+      <div>
+        <label for="login">Login * </label>
+        <input type="text" name="login" required />
+      </div>
+      <div>
+        <label for="senha">Senha * </label>
+        <input type="password" name="senha" minlength="8" required />
+      </div>
+      <div class="buttons">
+        <input type="submit" value="Cadastrar"/>
+        <input type="reset" value="Limpar" />
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+  <footer class="site-footer">
+    <div class="footer-info">
+      <strong>ASMOSUL</strong>
+      <span>Associação de Moradores da Quadra 1303 Sul de Palmas</span>
+    </div>
+
+    <div class="footer-links">
+      <span>Palmas - Tocantins</span>
+      <span>Atendimento comunitário</span>
+      <span>©️ 2026 ASMOSUL. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+</body>
+
+</html>

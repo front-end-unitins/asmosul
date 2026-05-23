@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ASMOSUL - Entrega</title>
+
+    <link rel="stylesheet" href="entrega.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+
+<body>
+
+    <!-- HEADER — Navbar top -->
+
+    <header>
+
+        <a href="institucional.html" class="logo-area">
+
+            <img src="./logo-removebg-preview.png" alt="Logo ASMOSUL">
+
+            <span class="logo-texto">
+                ASMOSUL
+            </span>
+
+        </a>
+
+        <nav>
+
+            <a href="institucional.html" class="nav-link">
+                Institucional
+            </a>
+
+            <a href="dashboard.html" class="nav-link">
+                Painel Administrativo
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- FORMULÁRIO (Input) -->
+
+    <section class="form-section">
+
+        <div class="form-container">
+
+            <h2>
+                Controle de Entrega
+            </h2>
+
+            <form>
+
+                <div class="form-grid">
+
+                    <div class="campo">
+
+                        <label>Beneficiário</label>
+
+                        <input type="text">
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label>Itens Entregues</label>
+
+                        <select multiple>
+
+                            <option>Cesta Básica</option>
+                            <option>Fraldas</option>
+                            <option>Roupas</option>
+                            <option>Calçados</option>
+                            <option>Higiene Pessoal</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label>Data da Entrega</label>
+
+                        <input type="date">
+
+                    </div>
+
+            
+                    <div class="campo">
+
+                        <label>Identificador</label>
+
+                        <input type="text">
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label>Descrição</label>
+
+                        <input type="text">
+
+                    </div>
+
+                </div>
+
+                <button type="submit">
+                    Registrar Entrega
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <script src="entrega.js"></script>
+
+</body>
+
+</html>

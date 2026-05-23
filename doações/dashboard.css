@@ -1,0 +1,551 @@
+:root {
+
+    /* CORES DO DESIGN SYSTEM */
+
+    --rosa1: #D9ABAB;
+    --rosa2: #FFDADA;
+    --rosa3: #FFEAEA;
+
+    --azul1: #86C7E9;
+    --azul2: #92DAFF;
+    --azul3: #BBE8FF;
+
+    --verde1: #E5FF9F;
+    --verde2: #CCF267;
+    --verde3: #A5C946;
+
+    --azul-destaque: #289CCF;
+    --azul-hover: #34C1FF;
+    --azul-claro: #61CFFF;
+
+    --branco: #FFFFFF;
+    --texto: #2D2D2D;
+
+    /* SOMBRAS DO DESIGN SYSTEM */
+
+    /* Shadow 1 — Leve: Cards, inputs */
+    --sombra-leve: 0px 2px 6px rgba(0, 0, 0, 0.08);
+
+    /* Shadow 2 — Médio: Dropdown, modal */
+    --sombra-media: 0px 4px 12px rgba(0, 0, 0, 0.12);
+
+    /* Shadow 3 — Alto: Drawer, overlay */
+    --sombra-alta: 0px 8px 24px rgba(0, 0, 0, 0.16);
+
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    display: flex;
+
+    min-height: 100vh;
+
+    font-family: Helvetica, Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        var(--rosa3),
+        var(--azul3)
+    );
+
+}
+
+/* SIDEBAR — Navbar top */
+
+.sidebar {
+
+    width: 260px;
+
+    background: var(--branco);
+
+    padding: 30px 20px;
+
+    box-shadow: var(--sombra-leve);
+
+}
+
+/* LOGO */
+
+.logo-area {
+
+    margin-bottom: 40px;
+
+}
+
+.logo-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    text-decoration: none;
+
+}
+
+.logo-link img {
+
+    width: 100px;
+
+}
+
+/* S1. Subtitle Semi Bold */
+
+.logo-link span {
+
+    color: var(--azul-destaque);
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+}
+
+/* MENU DA SIDEBAR */
+
+.sidebar nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+.sidebar nav a {
+
+    text-decoration: none;
+
+    color: var(--texto);
+
+    padding: 14px 18px;
+
+    border-radius: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    background: var(--branco);
+
+}
+
+.sidebar nav a:hover {
+
+    background: var(--azul3);
+
+}
+
+/* Botão primário azul */
+
+.menu-btn {
+
+    border: none;
+
+    padding: 14px 18px;
+
+    border-radius: 14px;
+
+    background: var(--azul-destaque);
+
+    color: var(--branco);
+
+    font-weight: 600;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    font-family: Helvetica, Arial, sans-serif;
+
+    text-align: left;
+
+}
+
+.menu-btn:hover {
+
+    background: var(--azul-hover);
+
+    transform: translateY(-2px);
+
+}
+
+/* CONTEÚDO PRINCIPAL*/
+
+.conteudo {
+
+    flex: 1;
+
+    padding: 40px;
+
+}
+
+/* TOPO */
+
+.topo {
+
+    margin-bottom: 40px;
+
+}
+
+/* H1 Semi Bold */
+
+.topo h1 {
+
+    color: var(--azul-destaque);
+
+    font-size: 40px;
+
+    font-weight: 600;
+
+}
+
+/* CARDS */
+
+.cards,
+.contador-section {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    margin-bottom: 40px;
+
+}
+
+/* Card */
+
+.card,
+.contador-card {
+
+    background: var(--branco);
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    box-shadow: var(--sombra-leve);
+
+}
+
+/* H1 */
+
+.card h2,
+.contador-card p {
+
+    color: var(--azul-destaque);
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+
+    font-weight: 700;
+
+}
+
+/* B2. Body Medium */
+
+.card p {
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+}
+
+/* H3 */
+
+.contador-card h3 {
+
+    color: var(--verde3);
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+
+}
+
+/* STATUS */
+
+.status-section {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 40px;
+
+}
+
+/* Status box — card  */
+
+.status-box {
+
+    background: var(--branco);
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    box-shadow: var(--sombra-leve);
+
+}
+
+/* H3 verde 32px */
+
+.status-box h2 {
+
+    margin-bottom: 20px;
+
+    color: var(--verde3);
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+}
+
+.status-box ul {
+
+    list-style: none;
+
+}
+
+/* B1 */
+
+.status-box li {
+
+    margin-bottom: 12px;
+
+    font-size: 16px;
+
+}
+
+/* TABELA */
+
+.tabela-section {
+
+    background: var(--branco);
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    box-shadow: var(--sombra-leve);
+
+    margin-bottom: 40px;
+
+}
+
+.titulo-tabela {
+
+    margin-bottom: 20px;
+
+}
+
+/* H4 Semi Bold */
+
+.titulo-tabela h2 {
+
+    color: var(--azul-destaque);
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+}
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+thead {
+
+    background: var(--azul3);
+
+}
+
+/* B2 Medium */
+
+th,
+td {
+
+    padding: 16px;
+
+    text-align: left;
+
+    font-size: 14px;
+
+}
+
+tbody tr {
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+/* FORMULÁRIO */
+
+.registro-section {
+
+    margin-bottom: 40px;
+
+}
+
+.registro-box {
+
+    background: var(--branco);
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    box-shadow: var(--sombra-leve);
+
+}
+
+/* H4 Semi Bold */
+
+.registro-box h2 {
+
+    margin-bottom: 25px;
+
+    color: var(--azul-destaque);
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+}
+
+#formRegistro {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+
+}
+
+/* Input */
+
+#formRegistro input,
+#formRegistro select {
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: var(--azul3);
+
+    font-family: Helvetica, Arial, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+
+}
+
+#formRegistro input:focus,
+#formRegistro select:focus {
+
+    border: 1.5px solid var(--azul-destaque);
+
+    background: var(--branco);
+
+    box-shadow: 0 0 0 3px rgba(50, 130, 246, 0.3);
+
+}
+
+/* Botão primário */
+
+#formRegistro button {
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        var(--azul-destaque),
+        var(--azul-destaque)
+    );
+
+    color: var(--branco);
+
+    font-weight: 600;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    padding: 15px;
+
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+#formRegistro button:hover {
+
+    background: linear-gradient(
+        135deg,
+        var(--azul-destaque),
+        var(--azul-hover)
+    );
+
+    transform: translateY(-3px);
+
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1000px) {
+
+    body {
+
+        flex-direction: column;
+
+    }
+
+    .sidebar {
+
+        width: 100%;
+
+    }
+
+    .status-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ASMOSUL - Dashboard Administrativo</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR — Navbar lateral -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <a href="institucional.html" class="logo-link">
+
+                <img src="./logo-removebg-preview.png" alt="Logo ASMOSUL">
+
+                <span>ASMOSUL</span>
+
+            </a>
+
+        </div>
+
+        <nav>
+
+            <button
+                class="menu-btn"
+                onclick="window.location.href='entrega.html'">
+
+                Entregas
+
+            </button>
+
+            <button class="menu-btn">
+
+                Relatórios
+
+            </button>
+
+            <button class="menu-btn">
+
+                Usuários
+
+            </button>
+
+        </nav>
+
+    </aside>
+
+    <!-- CONTEÚDO -->
+
+    <main class="conteudo">
+
+        <header class="topo">
+
+            <h1>
+                Painel Administrativo
+            </h1>
+
+        </header>
+
+        <!-- CARDS -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <h2 class="total-doacoes">0</h2>
+
+                <p>Doações Registradas</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2 class="total-arrecadado">R$ 0</h2>
+
+                <p>Valor Arrecadado</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2 class="familias">0</h2>
+
+                <p>Famílias Ajudadas</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2 class="cestas">0</h2>
+
+                <p>Cestas Disponíveis</p>
+
+            </div>
+
+        </section>
+
+        <!-- CONTADORES -->
+
+        <section class="contador-section">
+
+            <div class="contador-card">
+
+                <h3>Total de Entradas</h3>
+
+                <p class="contador-entradas">0</p>
+
+            </div>
+
+            <div class="contador-card">
+
+                <h3>Total de Saídas</h3>
+
+                <p class="contador-saidas">0</p>
+
+            </div>
+
+            <div class="contador-card">
+
+                <h3>Total de Itens</h3>
+
+                <p class="contador-itens">0</p>
+
+            </div>
+
+            <div class="contador-card">
+
+                <h3>Movimentações</h3>
+
+                <p class="contador-movimentacoes">0</p>
+
+            </div>
+
+        </section>
+
+        <!-- STATUS (alert) -->
+
+        <section class="status-section">
+
+            <div class="status-box">
+
+                <h2>Status das Doações</h2>
+
+                <ul>
+
+                    <li>✔ Recebido</li>
+
+                    <li>⏳ Em separação</li>
+
+                    <li>🚚 Em entrega</li>
+
+                    <li>✅ Entregue</li>
+
+                </ul>
+
+            </div>
+
+            <div class="status-box">
+
+                <h2>Resumo Financeiro</h2>
+
+                <p>
+                    Entradas:
+                    <span class="financeiro-entrada">
+                        R$ 0
+                    </span>
+                </p>
+
+                <p>
+                    Saídas:
+                    <span class="financeiro-saida">
+                        R$ 0
+                    </span>
+                </p>
+
+                <p>
+                    Saldo Atual:
+                    <span class="financeiro-saldo">
+                        R$ 0
+                    </span>
+                </p>
+
+                <p>
+                    Última movimentação:
+                    <span class="financeiro-ultima">
+                        Nenhuma
+                    </span>
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- TABELA -->
+
+        <section class="tabela-section">
+
+            <div class="titulo-tabela">
+
+                <h2>Últimas Movimentações</h2>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Doador</th>
+
+                        <th>Tipo</th>
+
+                        <th>Quantidade</th>
+
+                        <th>Status</th>
+
+                        <th>Data</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- FORMULÁRIO — (Input) -->
+
+        <section class="registro-section">
+
+            <div class="registro-box">
+
+                <h2>Registrar Movimentação</h2>
+
+                <form id="formRegistro">
+
+                    <input type="text" id="nome" placeholder="Nome do doador">
+
+                    <select id="tipo">
+
+                        <option value="">Tipo</option>
+
+                        <option>Cesta Básica</option>
+
+                        <option>Dinheiro</option>
+
+                        <option>Fraldas</option>
+
+                        <option>Roupas</option>
+
+                    </select>
+
+                    <input type="number" id="quantidade" placeholder="Quantidade" style="display:none;">
+
+                    <input type="number" id="valor" placeholder="Valor em R$" style="display:none;">
+
+                    <select id="status">
+
+                        <option value="">Status</option>
+
+                        <option>Recebido</option>
+
+                        <option>Em separação</option>
+
+                        <option>Entregue</option>
+
+                    </select>
+
+                    <button type="submit">
+
+                        Registrar
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

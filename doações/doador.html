@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ASMOSUL - Doador</title>
+
+    <link rel="stylesheet" href="doador.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+
+<body>
+
+    <!-- HEADER — Navbar top -->
+
+    <header>
+
+        <a href="institucional.html" class="logo-area">
+
+            <img src="./logo-removebg-preview.png" alt="Logo ASMOSUL">
+
+            <span class="logo-texto">
+                ASMOSUL
+            </span>
+
+        </a>
+
+        <nav>
+
+            <a href="institucional.html" class="nav-link">
+                Institucional
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- FORMULÁRIO — (Input) -->
+
+    <section class="form-section">
+
+        <div class="form-container">
+
+            <h2>
+                Cadastro do Doador
+            </h2>
+
+            <form>
+
+                <div class="form-grid">
+
+                    <div class="campo">
+
+                        <label>Nome Completo</label>
+
+                        <input type="text">
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label>CPF/CNPJ</label>
+
+                        <input type="text" id="cpfCNPJ">
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label>Telefone</label>
+
+                        <input type="text" id="telefone">
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label>Email</label>
+
+                        <input type="email">
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label>Tipo de Item</label>
+
+                        <select id="tipoDoacao">
+
+                            <option value="">Selecione</option>
+                            <option value="cesta">Cesta Básica</option>
+                            <option value="dinheiro">Dinheiro</option>
+                            <option value="higiene">Item de Higiene Pessoal</option>
+                            <option value="roupas">Roupas</option>
+                            <option value="calcados">Calçados</option>
+                            <option value="fraldas">Fraldas</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label>Doador</label>
+
+                        <select>
+
+                            <option>Pessoa Física</option>
+                            <option>Pessoa Jurídica</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="campo" id="campoValor" style="display:none;">
+
+                        <label>Valor</label>
+
+                        <input type="number">
+
+                    </div>
+
+                    <div class="campo" id="campoQuantidade" style="display:none;">
+
+                        <label>Quantidade</label>
+
+                        <input type="number">
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label>Data da Doação</label>
+
+                        <input type="date">
+
+                    </div>
+
+                </div>
+
+                <button type="button" onclick="window.location.href='institucional.html'">
+                    Salvar Doador
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <script>
+
+    const tipoDoacao = document.getElementById('tipoDoacao');
+
+    const campoValor = document.getElementById('campoValor');
+
+    const campoQuantidade = document.getElementById('campoQuantidade');
+
+    tipoDoacao.addEventListener('change', () => {
+
+        campoValor.style.display = 'none';
+        campoQuantidade.style.display = 'none';
+
+        if(tipoDoacao.value === 'dinheiro'){
+
+            campoValor.style.display = 'flex';
+
+        }
+
+        if(tipoDoacao.value === 'cesta' || tipoDoacao.value === 'fraldas'){
+
+            campoQuantidade.style.display = 'flex';
+
+        }
+
+    });
+
+    </script>
+
+    <script src="doador.js"></script>
+
+</body>
+
+</html>

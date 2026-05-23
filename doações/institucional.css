@@ -1,0 +1,887 @@
+:root {
+
+    /* CORES DO DESIGN SYSTEM */
+
+    --rosa1: #D9ABAB;
+    --rosa2: #FFDADA;
+    --rosa3: #FFEAEA;
+
+    --azul1: #86C7E9;
+    --azul2: #92DAFF;
+    --azul3: #BBE8FF;
+
+    --verde1: #E5FF9F;
+    --verde2: #CCF267;
+    --verde3: #A5C946;
+
+    --azul-destaque: #289CCF;
+    --azul-hover: #34C1FF;
+    --azul-claro: #61CFFF;
+
+    --branco: #FFFFFF;
+    --texto: #2D2D2D;
+
+    /* SOMBRAS DO DESIGN SYSTEM */
+
+    /* Shadow 1 — Leve: Cards, inputs */
+    --sombra-leve: 0px 2px 6px rgba(0, 0, 0, 0.08);
+
+    /* Shadow 2 — Médio: Dropdown, modal */
+    --sombra-media: 0px 4px 12px rgba(0, 0, 0, 0.12);
+
+    /* Shadow 3 — Alto: Drawer, overlay */
+    --sombra-alta: 0px 8px 24px rgba(0, 0, 0, 0.16);
+
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: Helvetica, Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        var(--rosa3),
+        var(--azul3)
+    );
+
+    color: var(--texto);
+
+}
+
+/* ========================
+   NAVBAR TOP — slide 18
+   ======================== */
+
+header {
+
+    width: 100%;
+
+    background: var(--branco);
+
+    padding: 22px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: var(--sombra-leve);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+    border-radius: 24px;
+
+}
+
+/* LOGO */
+
+.logo-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    text-decoration: none;
+
+}
+
+.logo-area img {
+
+    width: 100px;
+
+}
+
+.logo-texto {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: var(--azul-destaque);
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+}
+
+.logo-area:hover .logo-texto {
+
+    color: var(--azul-hover);
+
+}
+
+/* MENU */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    list-style: none;
+
+    gap: 20px;
+
+}
+
+/* Nav links — linha azul no hover (slide 18) */
+
+.nav-link {
+
+    text-decoration: none;
+
+    color: #222;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    position: relative;
+
+    transition: 0.3s ease;
+
+}
+
+.nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0%;
+
+    height: 4px;
+
+    background: var(--azul-destaque);
+
+    left: 0;
+
+    bottom: -10px;
+
+    border-radius: 50px;
+
+    transition: 0.3s;
+
+}
+
+.nav-link:hover::after {
+
+    width: 100%;
+
+}
+
+/* BOTÃO NAVBAR — slide 18 */
+
+.nav-contribuir {
+
+    text-decoration: none;
+
+    background: var(--azul-destaque);
+
+    color: var(--branco);
+
+    padding: 18px 28px;
+
+    border-radius: 18px;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    box-shadow: 0 6px 18px rgba(40, 156, 207, 0.20);
+
+    transition: 0.3s ease;
+
+    cursor: pointer;
+
+}
+
+.nav-contribuir:hover {
+
+    background: var(--azul-hover);
+
+    transform: translateY(-2px);
+
+}
+
+@media (max-width: 900px) {
+
+    header {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        border-radius: 0;
+
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 20px;
+
+    }
+
+    .logo-texto {
+
+        font-size: 28px;
+
+    }
+
+}
+
+/* ========================
+   HERO
+   ======================== */
+
+.hero {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 60px 8%;
+
+    text-align: center;
+
+}
+
+.hero-texto {
+
+    max-width: 900px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    padding: 60px;
+
+    border-radius: 30px;
+
+    box-shadow: var(--sombra-alta);
+
+}
+
+/* H1 — Tipografia H1 Semi Bold */
+
+.hero h1 {
+
+    font-size: 48px;
+
+    font-weight: 600;
+
+    color: var(--azul-destaque);
+
+    margin-bottom: 25px;
+
+    line-height: 1.2;
+
+}
+
+/* B1. Body Regular */
+
+.hero p {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+}
+
+/* BOTÃO PRIMÁRIO  */
+
+.botao {
+
+    display: inline-block;
+
+    background: linear-gradient(135deg, var(--azul-destaque), var(--azul-hover));
+
+    color: var(--branco);
+
+    padding: 18px 38px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+
+    box-shadow: var(--sombra-leve);
+
+    cursor: pointer;
+
+}
+
+.botao:hover {
+
+    background: linear-gradient(135deg, var(--azul-hover), var(--azul-hover));
+
+    transform: translateY(-3px);
+
+}
+
+/* TÍTULOS DE SEÇÃO — H2 Semi Bold */
+
+.titulo {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+.titulo h2 {
+
+    font-size: 40px;
+
+    font-weight: 600;
+
+    color: var(--azul-destaque);
+
+    position: relative;
+
+    display: inline-block;
+
+}
+
+.titulo h2::after {
+
+    content: "";
+
+    width: 100px;
+
+    height: 5px;
+
+    background: linear-gradient(90deg, var(--azul-hover), var(--verde2));
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    bottom: -15px;
+
+    border-radius: 20px;
+
+}
+
+/* SOBRE — Cards */
+
+.sobre {
+
+    padding: 90px 8%;
+
+}
+
+.sobre-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+
+}
+
+/* Card do design system */
+
+.card {
+
+    background: var(--branco);
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+
+    overflow: hidden;
+
+}
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: var(--sombra-media);
+
+}
+
+/* H3 Semi Bold */
+
+.card h3 {
+
+    color: var(--verde3);
+
+    margin-bottom: 18px;
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+}
+
+/* B1. Body */
+
+.card p {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+/* IMPACTO */
+
+.impacto {
+
+    padding: 90px 8%;
+
+    background: rgba(255, 255, 255, 0.35);
+
+}
+
+.impacto-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 30px;
+
+}
+
+.impacto-card {
+
+    background: var(--branco);
+
+    padding: 40px;
+
+    border-radius: 24px;
+
+    text-align: center;
+
+    box-shadow: var(--sombra-leve);
+
+}
+
+/* H1 */
+
+.impacto-card h3 {
+
+    font-size: 48px;
+
+    font-weight: 600;
+
+    color: var(--azul-destaque);
+
+    margin-bottom: 10px;
+
+}
+
+/* B2. Body Medium  */
+
+.impacto-card p {
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+}
+
+/* COMO AJUDAR — Cards */
+
+.ajuda {
+
+    padding: 90px 8%;
+
+}
+
+.ajuda-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+
+}
+
+.ajuda-card {
+
+    background: var(--branco);
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    box-shadow: var(--sombra-leve);
+
+    transition: 0.3s;
+
+}
+
+.ajuda-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: var(--sombra-media);
+
+}
+
+/* H3 */
+
+.ajuda-card h3 {
+
+    margin-bottom: 18px;
+
+    color: var(--azul-destaque);
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+}
+
+/* B1 */
+
+.ajuda-card p {
+
+    line-height: 1.8;
+
+    font-size: 16px;
+
+}
+
+/* TRANSPARÊNCIA*/
+
+.transparencia {
+
+    padding: 90px 8%;
+
+}
+
+.transparencia-box {
+
+    background: linear-gradient(
+        135deg,
+        var(--azul-destaque),
+        var(--azul-hover)
+    );
+
+    padding: 60px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    color: var(--branco);
+
+    box-shadow: var(--sombra-alta);
+
+}
+
+/* H2 40px */
+
+.transparencia-box h2 {
+
+    font-size: 40px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+}
+
+/* B1 16px */
+
+.transparencia-box p {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+/* CTA */
+
+.cta {
+
+    padding: 100px 8%;
+
+    text-align: center;
+
+}
+
+/* H1 48px */
+
+.cta h2 {
+
+    font-size: 48px;
+
+    font-weight: 600;
+
+    color: var(--verde3);
+
+    margin-bottom: 35px;
+
+}
+
+/* FOOTER */
+
+footer {
+
+    background: var(--branco);
+
+    color: var(--texto);
+
+    padding: 60px 8% 20px;
+
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
+
+}
+
+.footer-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 40px;
+
+    margin-bottom: 40px;
+
+}
+
+/* S1. Subtitle Semi Bold */
+
+.footer-container h3 {
+
+    margin-bottom: 18px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: var(--azul-destaque);
+
+}
+
+/* B1 16px */
+
+.footer-container p {
+
+    margin-bottom: 10px;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+
+    color: var(--texto);
+
+}
+
+
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 34px clamp(18px, 6vw, 88px);
+  color: #4d555f;
+  border-top: 1px solid var(--line);
+  background: #f6fafc;
+  font-size: 14px;
+}
+
+.footer-info,
+.footer-links {
+  display: grid;
+  gap: 6px;
+}
+
+.footer-info strong {
+  color:#289ccf;
+  font-size: 24px;
+}
+
+.footer-info span,
+.footer-links span {
+  color: var(--muted);
+}
+
+.footer-links {
+  text-align: right;
+}
+
+/* Links redes sociais */
+
+.rede-link {
+
+    text-decoration: none;
+
+    color: var(--texto);
+
+    transition: 0.3s;
+
+    font-weight: 500;
+
+}
+
+.rede-link:hover {
+
+    color: var(--azul-destaque);
+
+}
+
+/* ÁREA ADMIN */
+
+.footer-admin {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 30px 0;
+
+}
+
+/* Botão primário azul */
+
+.admin-footer {
+
+    text-decoration: none;
+
+    background: var(--azul-destaque);
+
+    color: var(--branco);
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    padding: 14px 28px;
+
+    border-radius: 18px;
+
+    border: none;
+
+    transition: 0.3s;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow: var(--sombra-leve);
+
+}
+
+.admin-footer:hover {
+
+    background: var(--azul-hover);
+
+    transform: translateY(-3px);
+
+}
+
+/* C1. Caption Regular 12px */
+
+.footer-copy {
+
+    text-align: center;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+
+    padding-top: 20px;
+
+    font-size: 12px;
+
+    color: var(--texto);
+
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .hero h1 {
+
+        font-size: 32px;
+
+    }
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+    .hero-texto {
+
+        padding: 40px;
+
+    }
+
+    .titulo h2 {
+
+        font-size: 32px;
+
+    }
+
+    .cta h2 {
+
+        font-size: 36px;
+
+    }
+
+    .transparencia-box {
+
+        padding: 40px;
+
+    }
+
+}

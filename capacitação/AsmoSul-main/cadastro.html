@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro</title>
+    <link rel="icon" type="image/png" href="./Imagens/Logo-clean.png">
+    <script src="./JavaScript/index.js" defer></script>
+    <link rel="stylesheet" href="./Css/index.css">
+</head>
+<body>
+    <header class="topbar auth-topbar">
+        <a class="brand" href="./index.html" aria-label="ASMOSUL">
+            <img src="./Imagens/Logo.png" alt="AsmoSul Logo" class="logo-img">
+            <span>ASMOSUL</span>
+        </a>
+        <nav class="nav auth-nav" aria-label="Alternar entre cadastro e login">
+            <button type="button" class="tablinks active" data-target="Cadastro">Cadastro</button>
+            <button type="button" class="tablinks" data-target="Entre">Entre</button>
+        </nav>
+    </header>
+
+    <main class="hero auth-hero">
+        <div class="hero-content auth-content">
+            <section id="Cadastro" class="tabcontent progress-card auth-panel" style="display:block;">
+                <div class="panel-head">
+                    <h1>Cadastro</h1>
+                </div>
+
+                <div class="progress-steps" aria-hidden="false">
+                    <div class="step-box filled" data-index="1" aria-hidden="true"></div>
+                    <div class="step-box" data-index="2" aria-hidden="true"></div>
+                    <div class="step-box" data-index="3" aria-hidden="true"></div>
+                    <div class="step-box" data-index="4" aria-hidden="true"></div>
+                    <div class="step-box" data-index="5" aria-hidden="true"></div>
+                    <div class="step-box" data-index="6" aria-hidden="true"></div>
+                    <div class="step-box" data-index="7" aria-hidden="true"></div>
+                </div>
+
+                <form id="cadastroWizard" class="wizard" action="#">
+                    <div class="wizard-step is-active" data-step="1">
+                        <div>
+                            <label for="nome">Nome *</label>
+                            <input type="text" name="nome" id="nome" required>
+                        </div>
+                        <div>
+                            <label for="telefone">Telefone *</label>
+                            <input type="tel" name="telefone" id="telefone" maxlength="15" onkeyup="mascaraTelefone(event)" placeholder="(##) #####-####" required>
+                        </div>
+                        <div>
+                            <label for="idade">Idade *</label>
+                            <input type="number" name="idade" id="idade" min="0" required>
+                        </div>
+                    </div>
+
+                    <div class="wizard-step" data-step="2">
+                        <div>
+                            <label for="cpf">CPF *</label>
+                            <input type="text" name="cpf" id="cpf" minlength="11" maxlength="14" placeholder="000.000.000-00" inputmode="numeric" required>
+                        </div>
+                        <div>
+                            <label for="date">Data de nascimento *</label>
+                            <input type="date" name="date" id="date" required maxlength="10">
+                        </div>
+                        <div>
+                            <label for="sexo">Sexo</label>
+                            <select name="sexo" id="sexo">
+                                <option value="">Selecione</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="wizard-step" data-step="3">
+                        <div>
+                            <label for="email">E-mail *</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div>
+                            <label for="escolaridade">Escolaridade</label>
+                            <select name="escolaridade" id="escolaridade">
+                                <option value="">Selecione</option>
+                                <option value="analfabeto">Analfabeto</option>
+                                <option value="ensino fundamental incompleto">Ensino fundamental incompleto</option>
+                                <option value="ensino fundamental completo">Ensino fundamental completo</option>
+                                <option value="ensino medio incompleto">Ensino medio incompleto</option>
+                                <option value="ensino medio completo">Ensino medio completo</option>
+                                <option value="ensino superior incompleto">Ensino superior incompleto</option>
+                                <option value="ensino superior completo">Ensino superior completo</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="profissao">Profissao</label>
+                            <input type="text" name="profissao" id="profissao">
+                        </div>
+                    </div>
+
+                    <div class="wizard-step" data-step="4">
+                        <div>
+                            <label for="quadra">Quadra</label>
+                            <input type="text" name="quadra" id="quadra">
+                        </div>
+                        <div>
+                            <label for="rua">Rua</label>
+                            <input type="text" name="rua" id="rua">
+                        </div>
+                        <div>
+                            <label for="lote">Lote</label>
+                            <input type="text" name="lote" id="lote">
+                        </div>
+                        <div>
+                            <label for="complemento">Complemento de endereco</label>
+                            <input type="text" name="complemento" id="complemento">
+                        </div>
+                    </div>
+
+                    <div class="wizard-step" data-step="5">
+                        <div>
+                            <label for="Renda">Renda familiar</label>
+                            <select name="Renda" id="Renda">
+                                <option value="">Selecione</option>
+                                <option value="2000">Ate R$2000,00</option>
+                                <option value="4000">Ate R$4000,00</option>
+                                <option value="8000">Ate R$8000,00</option>
+                                <option value="10000">Ate R$10000,00</option>
+                                <option value="11000">Acima de R$10000,00</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="Sim">Possui comorbidades?</label>
+                            <select name="comorbidade" id="Sim">
+                                <option value="">Selecione</option>
+                                <option value="sim">Sim</option>
+                                <option value="nao">Nao</option>
+                            </select>
+                            <div id="comorbidadeDetalhes" style="display:none; margin-top:8px;">
+                                <label for="detalhes">Quais comorbidades?</label>
+                                <input type="text" name="detalhes" id="detalhes" placeholder="Descreva aqui">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wizard-step" data-step="6">
+                        <div>
+                            <label for="nomeUsuario">Nome de usuario *</label>
+                            <input type="text" name="nomeUsuario" id="nomeUsuario" required>
+                        </div>
+                        <div>
+                            <label for="senha">Senha *</label>
+                            <input type="password" name="senha" id="senha" required minlength="8">
+                        </div>
+                        <div>
+                            <label for="senhaC">Confirmar senha *</label>
+                            <input type="password" name="senhaC" id="senhaC" required minlength="8">
+                        </div>
+                        <div id="passwordFeedback" aria-live="polite"></div>
+                    </div>
+
+                    <div class="wizard-actions">
+                        <button type="button" class="secondary-button wizard-back" hidden>Voltar</button>
+                        <button type="button" class="primary-button wizard-next">Avancar</button>
+                        <button type="submit" class="primary-button wizard-submit" hidden>Finalizar cadastro</button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="Entre" class="tabcontent progress-card auth-panel">
+                <div class="panel-head">
+                    <h1>Entre</h1>
+                </div>
+
+                <form id="loginForm" class="wizard" action="#">
+                    <div class="wizard-step is-active" data-step="1">
+                        <div>
+                            <label for="loginUser">Usuario *</label>
+                            <input type="text" name="loginUser" id="loginUser" required>
+                        </div>
+                        <div>
+                            <label for="loginSenha">Senha *</label>
+                            <input type="password" name="loginSenha" id="loginSenha" required minlength="8">
+                        </div>
+                    </div>
+
+                    <div class="wizard-actions">
+                        <button type="button" class="secondary-button wizard-back" hidden>Voltar</button>
+                        <button type="submit" class="primary-button wizard-submit">Entrar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-info">
+            <strong>ASMOSUL</strong>
+            <span>Associação de Moradores da Quadra 1303 Sul de Palmas</span>
+        </div>
+
+        <div class="footer-links">
+            <span>Palmas - Tocantins</span>
+            <span>Atendimento comunitário</span>
+            <span>© 2026 ASMOSUL. Todos os direitos reservados.</span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Capacitação</title>
+  <link rel="icon" type="image/png" href="./Imagens/Logo-clean.png">
+  <link rel="stylesheet" href="./Css/index.css">
+  <style>
+    .lead { color: var(--muted); font-size: 1.05rem; margin-top: 8px; }
+    .section { margin-bottom: 28px; }
+    .cta { display:flex; justify-content:center; margin-top:20px; }
+    .cta a { text-decoration:none; }
+    .hero-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 24px;
+      max-width: 90%;
+      margin: auto;
+      padding: 24px;
+      align-items: stretch;
+    }
+    .hero-copy,
+    .hero-stats {
+      min-width: 0;
+      width: 100%;
+    }
+    .hero-copy {
+      overflow-wrap: anywhere;
+    }
+    .hero-copy h1 {
+      font-size: clamp(34px, 3.2vw, 52px);
+      line-height: 1.12;
+    }
+    .hero-copy .lead,
+    .hero-copy li {
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+      word-break: normal;
+      hyphens: auto;
+    }
+    .hero-stats {
+      min-height: 100%;
+      background: var(--white);
+      display: flex;
+      align-items: stretch;
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      width: 100%;
+      height: 100%;
+    }
+    .media-grid figure {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .media-grid img {
+      display: block;
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #f3f6f8;
+    }
+    .media-grid figcaption {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.35;
+      text-align: center;
+    }
+    @media (max-width: 980px) { .hero-content { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <img src="./Imagens/Logo.png" alt="AsmoSul Logo" class="logo-img">
+      <span>ASMOSUL</span>
+    </a>
+    <nav class="nav">
+      <button type="button" class="tablinks" onclick="location.href='index.html'">Início</button>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero-content">
+      <section class="hero-copy progress-card" style="display:block;">
+        <span class="badge">Projeto ASMOSUL</span>
+        <h1>Capacitação para fortalecer a comunidade de Palmas - TO</h1>
+        <p class="lead">A ASMOSUL promove capacitação prática e gratuita para moradores de Palmas. Nosso objetivo é gerar autonomia, fomentar renda e fortalecer redes de apoio por meio de oficinas, cursos e mentorias adaptadas às necessidades locais.</p>
+
+        <div class="section">
+          <h2>O que é capacitação?</h2>
+          <p class="lead">São treinamentos práticos e oficinas que desenvolvem competências técnicas e comportamentais. Priorizamos conteúdos aplicáveis, empreendedorismo local, cultivo urbano, manutenção, tecnologia e alfabetização digital  para transformar oportunidades em resultados reais.</p>
+        </div>
+
+        <div class="section">
+          <h2>Como isso ajuda o projeto</h2>
+          <p class="lead">Capacitação aumenta empregabilidade, fomenta microempreendimentos e fortalece o tecido social. Participantes formam redes de apoio e contribuem para iniciativas locais multiplicando o impacto do projeto na cidade.</p>
+        </div>
+
+        <div class="section">
+          <h2>Programas e formatos</h2>
+          <ul class="lead">
+            <li>Oficinas práticas (horta comunitária, artesanato, manutenção)</li>
+            <li>Curso de empreendedorismo e gestão de pequenas iniciativas</li>
+            <li>Alfabetização digital e uso de ferramentas online</li>
+            <li>Mentoria, acompanhamento e encaminhamento local</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Impacto esperado</h2>
+          <p class="lead">Com a capacitação, esperamos aumentar a empregabilidade, fomentar microempreendimentos e fortalecer o tecido social nas áreas mais vulneráveis de Palmas. Cada participante capacitado é uma semente para transformação na comunidade.</p>
+        </div>
+
+        <div class="section">
+          <h2>Como participar</h2>
+          <p class="lead">Se você mora em Palmas e quer participar, clique no botão abaixo para iniciar seu cadastro. O processo é simples e gratuito.</p>
+        </div>
+
+      </section>
+
+      <aside class="hero-stats progress-card" aria-label="Espaço com imagens">
+        <div class="media-grid">
+          <figure>
+            <img src="./Imagens/WhatsApp Image 2026-04-28 at 15.47.59.jpeg" alt="Imagem 1 do projeto">
+            <figcaption>ASMOSUL formando vidas e fortalecendo a comunidade.</figcaption>
+          </figure>
+          <figure>
+            <img src="./Imagens/WhatsApp Image 2026-04-28 at 15.48.03.jpeg" alt="Imagem 2 do projeto">
+            <figcaption>Aprendizado, união e oportunidade para todos.</figcaption>
+          </figure>
+          <figure>
+            <img src="./Imagens/WhatsApp Image 2026-04-28 at 15.48.04.jpeg" alt="Imagem 3 do projeto">
+            <figcaption>Comunidade reunida para construir um futuro melhor.</figcaption>
+          </figure>
+          <figure>
+            <img src="./Imagens/WhatsApp Image 2026-04-28 at 15.49.58.jpeg" alt="Imagem 4 do projeto">
+            <figcaption>Diálogo, parceria e compromisso com a comunidade</figcaption>
+          </figure>
+          <figure>
+            <img src="./Imagens/WhatsApp Image 2026-04-28 at 15.48.05.jpeg" alt="Imagem 5 do projeto">
+            <figcaption>Cada certificado representa uma nova conquista.</figcaption>
+          </figure>
+          <figure>
+            <img src="./Imagens/WhatsApp Image 2026-04-28 at 15.50.01.jpeg" alt="Imagem 6 do projeto">
+            <figcaption>Comunidade unida gera mudanças reais.</figcaption>
+          </figure>
+        </div>
+      </aside>
+      <div class="bottom-row">
+        <div class="bottom-strip progress-card" aria-label="Faixa inferior decorativa">
+          <div class="botaoCad">
+            <p class="cadastro-callout" style="text-transform: uppercase; color: black; font-size: 25px;">Faça parte dessa transformação.</p>
+            <img src="./Imagens/imagem cadastro.jpeg" alt="Imagem de cadastro" class="cadastro-image">
+            <a href="./cadastro.html" class="join-button cadastro-link">Cadastrar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-info">
+      <strong>ASMOSUL</strong>
+      <span>Associação de Moradores da Quadra 1303 Sul de Palmas</span>
+    </div>
+
+    <div class="footer-links">
+      <span>Palmas - Tocantins</span>
+      <span>Atendimento comunitário</span>
+      <span>© 2026 ASMOSUL. Todos os direitos reservados.</span>
+    </div>
+    </footer>
+</body>
+</html>
