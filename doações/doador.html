@@ -10,6 +10,8 @@
     <title>ASMOSUL - Doador</title>
 
     <link rel="stylesheet" href="doador.css">
+    <link rel="icon" type="image/png" href="../capacitação/AsmoSul-main/Imagens/Logo-clean.png">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -157,30 +159,30 @@
 
     <script>
 
-    const tipoDoacao = document.getElementById('tipoDoacao');
+        const tipoDoacao = document.getElementById('tipoDoacao');
 
-    const campoValor = document.getElementById('campoValor');
+        const campoValor = document.getElementById('campoValor');
 
-    const campoQuantidade = document.getElementById('campoQuantidade');
+        const campoQuantidade = document.getElementById('campoQuantidade');
 
-    tipoDoacao.addEventListener('change', () => {
+        tipoDoacao.addEventListener('change', () => {
 
-        campoValor.style.display = 'none';
-        campoQuantidade.style.display = 'none';
+            campoValor.style.display = 'none';
+            campoQuantidade.style.display = 'none';
 
-        if(tipoDoacao.value === 'dinheiro'){
+            if (tipoDoacao.value === 'dinheiro') {
 
-            campoValor.style.display = 'flex';
+                campoValor.style.display = 'flex';
 
-        }
+            }
 
-        if(tipoDoacao.value === 'cesta' || tipoDoacao.value === 'fraldas'){
+            if (tipoDoacao.value === 'cesta' || tipoDoacao.value === 'fraldas') {
 
-            campoQuantidade.style.display = 'flex';
+                campoQuantidade.style.display = 'flex';
 
-        }
+            }
 
-    });
+        });
 
     </script>
 
