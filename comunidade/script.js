@@ -37,4 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
         this.value = valor;
     });
 
+    const associarForm = document.getElementById('associarForm');
+
+    associarForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Cadastro enviado com sucesso!');
+        window.location.href = './associar.html';
+    });
+
 });
