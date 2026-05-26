@@ -744,12 +744,14 @@ select {
 .dropdown:hover .submenu {
   display: block;
 }
+
 /* iniciativas */
 .iniciativas {
   padding: 15px;
   margin: 12px 0 0;
-  font-weight: bold;
-  color: #289ccf;
   display: inline-grid;
-
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #289ccf;
 }
