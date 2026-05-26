@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mensagem = trim($_POST["mensagem"] ?? "");
 
     $destinatario = "virgulinotamirys@gmail.com";
-    $assunto = "Nova mensagem do formulário";
+    $assunto = "Faça parte da comunidade ASMOSUL - Nova mensagem de contato";
 
     $corpo = "Nome: $nome\n";
     $corpo .= "E-mail: $email\n";
