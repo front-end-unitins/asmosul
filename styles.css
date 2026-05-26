@@ -261,7 +261,7 @@ select {
   margin-top: 22px;
 }
 
-.progress-item > span {
+.progress-item>span {
   color: var(--blue-700);
   font-weight: 700;
 }
@@ -685,6 +685,7 @@ select {
 }
 
 @media (max-width: 520px) {
+
   .hero-copy,
   .hero-panel {
     max-width: 320px;
@@ -742,4 +743,13 @@ select {
 
 .dropdown:hover .submenu {
   display: block;
+}
+
+.iniciativas {
+  padding: 15px;
+  margin: 12px 0 0;
+  font-weight: bold;
+  color: #289ccf;
+  display: inline-grid;
+
 }
